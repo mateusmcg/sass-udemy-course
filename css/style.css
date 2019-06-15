@@ -57,6 +57,7 @@ body {
 .header-primary {
   color: #fff;
   text-transform: uppercase;
+  backface-visibility: hidden;
 }
 
 .header-primary-main {
@@ -64,6 +65,7 @@ body {
   font-size: 60px;
   font-weight: 400;
   letter-spacing: 36px;
+  animation: ltr 2s;
 }
 
 .header-primary-sub {
@@ -71,4 +73,37 @@ body {
   font-size: 25px;
   font-weight: 700;
   letter-spacing: 15px;
+  animation: rtl 2s;
+}
+
+@keyframes ltr {
+  0% {
+    opacity: 0; 
+    transform: translateX(-15%);
+  }
+
+  80% {
+    transform: translateX(1%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes rtl {
+  0% {
+    opacity: 0; 
+    transform: translateX(15%);
+  }
+
+  80% {
+    transform: translateX(-1%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
