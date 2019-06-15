@@ -24,14 +24,44 @@ body {
 
 .header {
   height: 95vh;
+  position: relative;
   background-image: linear-gradient(
       to right bottom,
-      hsla(111, 55%, 64%, 0.8),
-      hsla(160, 64%, 43%, 0.8)
+      rgba(127, 213, 112, 0.8),
+      rgba(39, 179, 133, 0.8)
     ),
     url("../img/hero.jpg");
   background-size: cover;
   background-position: top;
 
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo {
+  height: 35px;
+}
+
+.header-primary {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.header-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 36px;
+}
+
+.header-primary-sub {
+  display: block;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 15px;
 }
